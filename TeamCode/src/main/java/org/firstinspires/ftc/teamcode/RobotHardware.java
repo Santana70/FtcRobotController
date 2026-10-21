@@ -26,40 +26,40 @@ public class RobotHardware {
     public void init(HardwareMap hardwareMap) {
 
         // Drive
-        frontLeft = hardwareMap.get(DcMotorEx.class, "frontLeft");
-        frontRight = hardwareMap.get(DcMotorEx.class, "frontRight");
-        backLeft = hardwareMap.get(DcMotorEx.class, "backLeft");
-        backRight = hardwareMap.get(DcMotorEx.class, "backRight");
+//        frontLeft = hardwareMap.get(DcMotorEx.class, "frontLeft");
+//        frontRight = hardwareMap.get(DcMotorEx.class, "frontRight");
+//        backLeft = hardwareMap.get(DcMotorEx.class, "backLeft");
+//        backRight = hardwareMap.get(DcMotorEx.class, "backRight");
 
         // Mechanisms
         shooter = hardwareMap.get(DcMotorEx.class, "shooter");
-        intake = hardwareMap.get(DcMotorEx.class, "intake");
+//        intake = hardwareMap.get(DcMotorEx.class, "intake");
 
 
         // =========================
         // MOTOR DIRECTIONS
         // =========================
 
-        frontLeft.setDirection(DcMotor.Direction.REVERSE);
-        backLeft.setDirection(DcMotor.Direction.REVERSE);
-
-        frontRight.setDirection(DcMotor.Direction.FORWARD);
-        backRight.setDirection(DcMotor.Direction.FORWARD);
+//        frontLeft.setDirection(DcMotor.Direction.REVERSE);
+//        backLeft.setDirection(DcMotor.Direction.REVERSE);
+//
+//        frontRight.setDirection(DcMotor.Direction.FORWARD);
+//        backRight.setDirection(DcMotor.Direction.FORWARD);
 
         shooter.setDirection(DcMotor.Direction.FORWARD);
-        intake.setDirection(DcMotor.Direction.FORWARD);
+//        intake.setDirection(DcMotor.Direction.FORWARD);
 
 
         // =========================
         // BRAKE MODE
         // =========================
-
-        setBrake(frontLeft);
-        setBrake(frontRight);
-        setBrake(backLeft);
-        setBrake(backRight);
-        setBrake(shooter);
-        setBrake(intake);
+//
+//        setBrake(frontLeft);
+//        setBrake(frontRight);
+//        setBrake(backLeft);
+//        setBrake(backRight);
+//        setBrake(shooter);
+//        setBrake(intake);
 
 
         // =========================
@@ -68,10 +68,10 @@ public class RobotHardware {
 
         shooter.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
-        frontLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        frontRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        backLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        backRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+//        frontLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+//        frontRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+//        backLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+//        backRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
     }
 
 
@@ -84,12 +84,12 @@ public class RobotHardware {
 
     public void stopAll() {
 
-        frontLeft.setPower(0);
-        frontRight.setPower(0);
-        backLeft.setPower(0);
-        backRight.setPower(0);
+//        frontLeft.setPower(0);
+//        frontRight.setPower(0);
+//        backLeft.setPower(0);
+//        backRight.setPower(0);
 
         shooter.setPower(0);
-        intake.setPower(0);
+//        intake.setPower(0);
     }
 }

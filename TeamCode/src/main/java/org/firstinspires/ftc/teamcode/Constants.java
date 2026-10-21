@@ -23,7 +23,7 @@ public final class Constants {
     public static final double SHOOTER_GEAR_RATIO = 5.0 / 6.0;
 
     // Starting shooter target
-    public static final double SHOOTER_TARGET_RPM = 6000.0;
+    public static final double SHOOTER_TARGET_RPM = 1750.00;
 
     // Shooter controller
     public static final double SHOOTER_KP = 0.0008;

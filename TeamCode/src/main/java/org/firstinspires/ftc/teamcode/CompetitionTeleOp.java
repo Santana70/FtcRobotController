@@ -65,11 +65,11 @@ public class CompetitionTeleOp extends OpMode {
         // DRIVER 2 - INTAKE
         // ==========================================
 
-        if (gamepad2.a) {
+        if (gamepad1.a) {
 
             intake.forward();
 
-        } else if (gamepad2.b) {
+        } else if (gamepad1.b) {
 
             intake.reverse();
 
@@ -84,7 +84,7 @@ public class CompetitionTeleOp extends OpMode {
         // ==========================================
 
         // X = shooter ON
-        if (gamepad2.x) {
+        if (gamepad1.x) {
 
             shooterEnabled = true;
 
@@ -95,7 +95,7 @@ public class CompetitionTeleOp extends OpMode {
 
 
         // Y = shooter OFF
-        if (gamepad2.y) {
+        if (gamepad1.y) {
 
             shooterEnabled = false;
 
@@ -139,8 +139,7 @@ public class CompetitionTeleOp extends OpMode {
 
         telemetry.addData(
                 "Intake Power",
-                "%.2f",
-                intake.getPower()
+                "%.2f"
         );
 
         telemetry.update();
