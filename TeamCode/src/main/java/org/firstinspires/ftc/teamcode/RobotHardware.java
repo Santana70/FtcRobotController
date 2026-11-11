@@ -2,8 +2,9 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
-
+import com.qualcomm.robotcore.hardware.CRServo;
 public class RobotHardware {
 
     // =========================
@@ -22,32 +23,34 @@ public class RobotHardware {
     public DcMotorEx shooter;
     public DcMotorEx intake;
 
+    public CRServo indexer;
 
     public void init(HardwareMap hardwareMap) {
 
         // Drive
-//        frontLeft = hardwareMap.get(DcMotorEx.class, "frontLeft");
-//        frontRight = hardwareMap.get(DcMotorEx.class, "frontRight");
-//        backLeft = hardwareMap.get(DcMotorEx.class, "backLeft");
-//        backRight = hardwareMap.get(DcMotorEx.class, "backRight");
+        frontLeft = hardwareMap.get(DcMotorEx.class, "frontLeft");
+        frontRight = hardwareMap.get(DcMotorEx.class, "frontRight");
+        backLeft = hardwareMap.get(DcMotorEx.class, "backLeft");
+        backRight = hardwareMap.get(DcMotorEx.class, "backRight");
 
         // Mechanisms
         shooter = hardwareMap.get(DcMotorEx.class, "shooter");
-//        intake = hardwareMap.get(DcMotorEx.class, "intake");
+        intake = hardwareMap.get(DcMotorEx.class, "intake");
 
+        indexer = hardwareMap.get(CRServo.class, "indexer");
 
         // =========================
         // MOTOR DIRECTIONS
         // =========================
 
-//        frontLeft.setDirection(DcMotor.Direction.REVERSE);
-//        backLeft.setDirection(DcMotor.Direction.REVERSE);
-//
-//        frontRight.setDirection(DcMotor.Direction.FORWARD);
-//        backRight.setDirection(DcMotor.Direction.FORWARD);
+        frontLeft.setDirection(DcMotor.Direction.FORWARD);
+        backLeft.setDirection(DcMotor.Direction.FORWARD);
+
+        frontRight.setDirection(DcMotor.Direction.REVERSE);
+        backRight.setDirection(DcMotor.Direction.FORWARD);
 
         shooter.setDirection(DcMotor.Direction.FORWARD);
-//        intake.setDirection(DcMotor.Direction.FORWARD);
+        intake.setDirection(DcMotor.Direction.FORWARD);
 
 
         // =========================
@@ -68,10 +71,10 @@ public class RobotHardware {
 
         shooter.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
 
-//        frontLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-//        frontRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-//        backLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-//        backRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        frontLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        frontRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        backLeft.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        backRight.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
     }
 
 
@@ -84,12 +87,12 @@ public class RobotHardware {
 
     public void stopAll() {
 
-//        frontLeft.setPower(0);
-//        frontRight.setPower(0);
-//        backLeft.setPower(0);
-//        backRight.setPower(0);
+        frontLeft.setPower(0);
+        frontRight.setPower(0);
+        backLeft.setPower(0);
+        backRight.setPower(0);
 
         shooter.setPower(0);
-//        intake.setPower(0);
+        intake.setPower(0);
     }
 }

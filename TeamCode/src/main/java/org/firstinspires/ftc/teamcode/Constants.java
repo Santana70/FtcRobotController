@@ -1,6 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
-public final class Constants {
+public final class Constants {  
 
     private Constants() {}
 
@@ -19,24 +19,25 @@ public final class Constants {
     // REV HD encoder
     public static final double SHOOTER_TICKS_PER_MOTOR_REV = 28.0;
 
+
     // 5:6 speed gearing
-    public static final double SHOOTER_GEAR_RATIO = 5.0 / 6.0;
+    public static final double SHOOTER_GEAR_RATIO = 9.0 / 6.0;
 
     // Starting shooter target
-    public static final double SHOOTER_TARGET_RPM = 1750.00;
+    public static final double SHOOTER_TARGET_RPM = 1500.00;
 
     // Shooter controller
-    public static final double SHOOTER_KP = 0.0008;
-    public static final double SHOOTER_KI = 0.0;
-    public static final double SHOOTER_KD = 0.0;
-    public static final double SHOOTER_KF = 0.00020;
+    public static final double SHOOTER_KP = 0.000480;
+    public static final double SHOOTER_KI = 0.0000;
+    public static final double SHOOTER_KD = 0.000005;
+    public static final double SHOOTER_KF = 0.00037;
 
 
     // =========================
     // INTAKE
     // =========================
 
-    public static final double INTAKE_POWER = 0.30;
+    public static final double INTAKE_POWER = 0.90;
 
 
     // =========================

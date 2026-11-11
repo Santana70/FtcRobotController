@@ -11,6 +11,7 @@ public class CompetitionTeleOp extends OpMode {
     private Shooter shooter;
     private Intake intake;
 
+    private Indexer indexer;
     private boolean shooterEnabled = false;
 
 
@@ -23,6 +24,7 @@ public class CompetitionTeleOp extends OpMode {
         drive = new MecanumDrive(hardware);
         shooter = new Shooter(hardware.shooter);
         intake = new Intake(hardware.intake);
+        indexer = new Indexer(hardware.indexer);
 
         telemetry.addLine("COMPETITION TELEOP READY");
         telemetry.update();
@@ -80,7 +82,7 @@ public class CompetitionTeleOp extends OpMode {
 
 
         // ==========================================
-        // DRIVER 2 - SHOOTER
+        // DRIVER 1 - SHOOTER
         // ==========================================
 
         // X = shooter ON
@@ -107,6 +109,14 @@ public class CompetitionTeleOp extends OpMode {
         if (shooterEnabled) {
 
             shooter.update();
+        }
+
+        if (gamepad1.left_bumper) {
+            indexer.forward();
+        } else if (gamepad1.right_bumper) {
+            indexer.reverse();
+        } else {
+            indexer.stop();
         }
 
 
